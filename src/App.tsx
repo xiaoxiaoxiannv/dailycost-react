@@ -4,33 +4,38 @@ import {
   Switch,
   Route,
   Redirect
-} from "react-router-dom";
+} from 'react-router-dom';
 import Tags from 'views/Tags';
 import Money from 'views/Money';
 import Statistics from 'views/Statistics';
 import NoMatch from 'views/NoMatch';
+import styled from 'styled-components';
 
-
+const AppWrapper = styled.div`
+ color: #333;
+`;
 
 function App() {
   return (
-    <Router>
+    <AppWrapper>
+      <Router>
         <Switch>
           <Route path="/tags">
-            <Tags />
+            <Tags/>
           </Route>
           <Route path="/money">
-            <Money />
+            <Money/>
           </Route>
           <Route path="/statistics">
-            <Statistics />
+            <Statistics/>
           </Route>
           <Redirect exact from='/' to='money'/>
           <Route path='*'>
             <NoMatch/>
           </Route>
         </Switch>
-    </Router>
+      </Router>
+    </AppWrapper>
   );
 }
 

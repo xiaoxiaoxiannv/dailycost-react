@@ -1,137 +1,18 @@
 import Layout from '../components/Layout';
 import React from 'react';
 import styled from 'styled-components';
-
-
-const TagsSection = styled.section`
-  background:rgb(255,255,255);
-  padding: 12px 16px;
-  flex-grow: 1;
-  display:flex;
-  flex-direction: column;
-  justify-content:flex-end;
-  align-items:flex-start;
-  >ol{
-    margin: 0 -12px;
-    >li{
-      background:rgb(168,189,220);
-      border-radius: 18px;
-      display:inline-block;
-      padding: 3px 18px;
-      font-size: 14px;
-      margin: 8px 12px;
-    }
-  }
-  >button{
-    background:none;
-    border: none;
-    padding: 2px 4px;
-    border-bottom: 1px solid #666;
-    color: #666;
-    margin-top: 8px;
-  }
-`;
-
-const NotesSection = styled.section`
-  background:rgb(240,240,240);
-  padding: 0 16px;
-  font-size: 14px;
-  >label{
-    display:flex;
-    align-items:center;
-    >span{
-      margin-right: 16px;
-      white-space: nowrap;
-    }
-    >input{
-      display:block;
-      width: 100%;
-      height: 72px;
-      background:none;
-      border: none;
-    }
-  }
-`;
-
-const CategorySection = styled.section`
-  font-size: 24px;
-  >ul{
-    display:flex;
-    background:rgb(138,165,205);
-    >li{
-      width: 50%;
-      text-align:center;
-      padding: 16px 0;
-      position: relative;
-      &.selected::after{
-        content:'';
-        display:block;
-        height: 3px;
-        background:rgb(45,95,170);
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        left: 0;
-      }
-    }
-  }
-`;
-
-const NumberPadSection = styled.section`
-  display:flex;
-  flex-direction: column;
-  >.output{
-    font-size: 36px;
-    line-height: 72px;
-    text-align:right;
-    padding: 0 16px;
-    box-shadow: inset 0 -5px 5px -5px rgba(0,0,0,0.25),
-                inset 0 5px 5px -5px rgba(0,0,0,0.25);
-  }
-  >.pad{
-    >button{
-      font-size: 18px;
-      float: left;
-      width: 25%;
-      height: 64px;
-      border: none;
-      &.ok{
-        height: 128px;
-        float: right;
-      }
-      &.zero{
-        width: 50%;
-      }
-      &:nth-child(1) {
-        background:rgb(217,224,235);
-      }
-      &:nth-child(2), &:nth-child(5) {
-        background: rgb(190,202,221);
-      }
-      &:nth-child(3), &:nth-child(6), &:nth-child(9) {
-        background: rgb(164,180,207);
-      }
-      &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13) {
-          background: rgb(137,159,193);
-      }
-      &:nth-child(8), &:nth-child(11), &:nth-child(13) {
-          background: rgb(110,137,179);
-      }
-      &:nth-child(12) {
-          background: rgb(77,104,146);
-      }
-      &:nth-child(14) {
-          background: rgb(86,115,162);
-      }
-    }
-  }
-`;
+import { TagsSection } from './Money/TagsSection';
+import { NotesSection } from './Money/NotesSection';
+import { CategorySection } from './Money/CategorySection';
+import { NumberPadSection } from './Money/NumberPadSection';
 
 const MyLayout = styled(Layout)`
   display:flex;
   flex-direction: column;
 `;
+
 function Money() {
+  // @ts-ignore
   return (
     <MyLayout>
       <TagsSection>

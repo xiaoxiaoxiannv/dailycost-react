@@ -9,9 +9,10 @@ const NavWrapper = styled.nav`
   > ul{
     display:flex;
     > li{
-      width: 33.3333%;
+          width: 33.3333%;
       text-align: center;
-      display:flex;
+    >a{
+          display:flex;
       flex-direction: column;
       padding: 4px 0;
       justify-content:center;
@@ -21,28 +22,35 @@ const NavWrapper = styled.nav`
         height: 24px;
       }
     }
+    }
   }
 `;
 
 
-const Nav = ()=>{
-  return(
+const Nav = () => {
+  return (
     <NavWrapper>
       <ul>
         <li>
-          <Icon name='tag'/>
-          <Link to="/tags">标签</Link>
+          <Link to="/tags">
+            <Icon name='tag'/>
+            标签
+          </Link>
         </li>
         <li>
-          <Icon name='money'/>
-          <Link to="/money">记一笔</Link>
+          <Link to="/money">
+            <Icon name='money'/>
+            记一笔
+          </Link>
         </li>
         <li>
-          <Icon name='chart'/>
-          <Link to="/statistics">统计</Link>
+          <Link to="/statistics">
+            <Icon name='chart'/>
+            统计
+          </Link>
         </li>
       </ul>
     </NavWrapper>
-  )
+  );
 };
 export default Nav;

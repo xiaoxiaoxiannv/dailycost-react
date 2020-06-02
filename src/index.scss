@@ -36,3 +36,8 @@ button{
   height: 1em;
   display: inline-block;
 }
+.clearfix::after{
+  contain: '';
+  display: block;
+  clear: both;
+}

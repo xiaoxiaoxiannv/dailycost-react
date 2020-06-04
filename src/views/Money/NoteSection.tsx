@@ -4,7 +4,7 @@ import {Input} from '../../components/Input';
 
 const Wrapper = styled.section`
   background:rgb(240,240,240);
-  padding: 0 16px;
+  padding: 14px 16px;
   font-size: 14px;
 `;
 

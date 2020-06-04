@@ -1,20 +1,24 @@
-@import-normalize;
+@import-normalize ;
 @import "helper";
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
-*::before{
+
+*::before {
   box-sizing: border-box;
 }
-*::after{
+
+*::after {
   box-sizing: border-box;
 }
-ul,ol{
+
+ul, ol {
   list-style: none;
 }
-a{
+
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -23,25 +27,30 @@ body {
   font-family: $font-hei;
   font-size: 16px;
   line-height: 1.2;
-  background: rgb(240,240,240);
+  background: rgb(240, 240, 240);
 }
-button{
-  font-family: inherit;
+
+button, input {
+  font: inherit;
 }
-:focus{
+
+:focus {
   outline: none;
 }
-.icon{
+
+.icon {
   width: 1em;
   height: 1em;
   display: inline-block;
 }
-.clearfix::after{
+
+.clearfix::after {
   contain: '';
   display: block;
   clear: both;
 }
-.oneLine{
+
+.oneLine {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

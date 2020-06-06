@@ -29,14 +29,13 @@ function Money() {
     setSelected({...selected, ...obj});
   };
   const submit = () => {
-    addRecord(selected);
-    alert('保存成功');
-    setSelected(defauleFormData);
+    if(addRecord(selected)){
+      alert('保存成功');
+      setSelected(defauleFormData);
+    }
   };
   return (
     <MyLayout>
-      {JSON.stringify((selected))}
-      <hr/>
       <TagsSection value={selected.tagIds}
                    onChange={tagIds => onChange({tagIds})}/>
       <NoteSection value={selected.note}

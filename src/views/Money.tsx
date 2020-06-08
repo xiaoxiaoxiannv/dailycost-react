@@ -26,7 +26,7 @@ const CategoryWrapper = styled.div`
 
 function Money() {
   const [selected, setSelected] = useState(defauleFormData);
-  const {records, addRecord} = useRecords();
+  const {addRecord} = useRecords();
 
   const onChange = (obj: Partial<typeof selected>) => {
     setSelected({...selected, ...obj});
